@@ -19,7 +19,7 @@ from django.conf.urls import include, url
 import polls.views
 
 urlpatterns = [
-    url(r'^$', polls.views.index, name='index'),
+    url(r'^$', polls.views.IndexView.as_view(), name='index'),
     path('polls/', include('polls.urls')),
     path('admin/', admin.site.urls),
 ]
